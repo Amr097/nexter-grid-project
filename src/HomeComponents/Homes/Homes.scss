@@ -1,0 +1,107 @@
+@import "../../app/styles/globals";
+
+.homes {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 5rem;
+  padding: 7rem 0;
+
+  &__card {
+    background-color: $color-grey-light-1;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__head {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: contain;
+    grid-column: 1/-1;
+  }
+
+  &__caption {
+    grid-column: 1/-1;
+    justify-self: center;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.204);
+    width: max-content;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: $font-display;
+    color: white;
+    background-color: $color-secondary;
+    padding: 1.5rem 3rem;
+    border-radius: 2px;
+    transform: translateY(-50%);
+  }
+
+  //mid
+
+  &__mid {
+    grid-column: 1/-1;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-gap: 3rem;
+    justify-content: space-around;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-gap: 2rem;
+    justify-content: flex-start;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $color-primary;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  .btn-card {
+    grid-column: 1/-1;
+    width: 100%;
+  }
+
+  //like button
+
+  &__link {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  &__label {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    z-index: 9999;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: rgb(235, 223, 223);
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &__link:checked + &__label > &__icon {
+    fill: $color-primary;
+  }
+}

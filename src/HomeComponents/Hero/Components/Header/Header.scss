@@ -1,0 +1,8 @@
+@import "../../../../app/styles/globals";
+
+.header {
+  background-color: aliceblue;
+  grid-column: sidebar-end / col-end 6;
+  grid-row: 1 / 2;
+  background-color: $color-secondary;
+}

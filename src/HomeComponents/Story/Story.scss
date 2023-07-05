@@ -1,0 +1,54 @@
+@import "../../app/styles/globals";
+
+.story__pictures {
+  grid-column: sidebar-end / col-end 4;
+  position: relative;
+  background-image: linear-gradient(
+      rgba($color-primary, 0.5),
+      rgba($color-primary-dark, 0.5)
+    ),
+    url(/images/back.jpg);
+
+  background-size: cover;
+  z-index: 5;
+
+  .story__image {
+    position: absolute;
+    display: inline-block;
+
+    &--2 {
+      width: 75%;
+      object-fit: contain;
+      inset: 0;
+      margin: auto;
+      box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.195);
+    }
+
+    &--3 {
+      width: 55%;
+      object-fit: contain;
+      box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.195);
+      bottom: 7rem;
+      right: -4.5rem;
+    }
+  }
+}
+
+.story__content {
+  background-color: $color-grey-light-1;
+  grid-column: col-start 5 / full-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10rem;
+  gap: 2.5rem;
+
+  .story__text {
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.5;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../app/styles/globals";
+
+.features {
+  height: 100vh;
+  grid-column: center-start / center-end;
+  display: grid;
+  //grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  grid-column-gap: 6rem;
+
+  &__box {
+    grid-column: span 1;
+    display: grid;
+    grid-template-columns: [icon-start] min-content [icon-end p-start] 1fr [p-end];
+    grid-template-rows: max-content 1fr;
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 1.5rem;
+    align-items: flex-start;
+
+    &-icon {
+      width: 5rem;
+      height: 5rem;
+      fill: $color-primary;
+
+      grid-row: 1, -1;
+    }
+  }
+
+  &__text {
+    grid-column: p-start / p-end;
+  }
+
+  &__heading {
+    align-self: center;
+  }
+}
