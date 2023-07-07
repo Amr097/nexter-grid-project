@@ -4,11 +4,7 @@ import "./Navbar.scss";
 const Navbar = () => {
   return (
     <div className="sidebar">
-      <div className="bars">
-        <span className="bars__bar">&#8213;</span>
-        <span className="bars__bar">&#8213;</span>
-        <span className="bars__bar">&#8213;</span>
-      </div>
+      <button className="btn-nav"></button>
     </div>
   );
 };

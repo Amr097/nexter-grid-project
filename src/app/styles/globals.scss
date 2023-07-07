@@ -26,10 +26,10 @@ html {
 
 body {
   display: grid;
-  grid-template-rows: 100vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: 85vh min-content 40vw repeat(3, min-content);
 
   grid-template-columns:
-    [sidebar-start] 7rem [sidebar-end full-start] minmax(5rem, 1fr)
+    [sidebar-start] 9rem [sidebar-end full-start] minmax(5rem, 1fr)
     [center-start] repeat(
       8,
       [col-start] minmax(min-content, max-content) [col-end]

@@ -1,4 +1,33 @@
+@import "../../../../app/styles/globals";
+
 .relators {
-  background-color: aqua;
+  background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 5vh;
+    align-items: center;
+  }
+
+  &__image {
+    grid-column: 1 / span 1;
+    display: block;
+    border-radius: 50%;
+    object-fit: contain;
+    width: 7rem;
+  }
+
+  &__sold {
+    color: $color-grey-light-2;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
 }
